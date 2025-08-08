@@ -1,2 +1,2 @@
 # ENTORNOS-GRAFICOS
-repo ejercicios entornos Nuria Fornells
+repo practicas resueltas entornos Nuria Belen Fornells
