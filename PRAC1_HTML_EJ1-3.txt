@@ -1,0 +1,197 @@
+Ejercicios
+
+Ejercitación 1 
+1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
+HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Fue creado por Tim Berners-Lee en 1991.
+Principales versiones:  
+  - HTML (1991)  
+  - HTML 2.0 (1995)  
+  - HTML 3.2 (1997)  
+  - HTML 4.01 (1999)  
+  - XHTML (2000)  
+  - HTML5 (2014 - presente)  
+-Última versión: HTML5.
+
+2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos
+con HTML?
+-Escribir marcado válido y semántico (usar etiquetas por su significado). 
+-Separar contenido (HTML) de presentación (CSS) y comportamiento (JS). 
+-Usar un DOCTYPE correcto y codificación (UTF-8).
+-Asegurar accesibilidad. 
+-Diseño progresivo ( que el contenido sea accesible aun sin CSS o JS).
+-Validar y probar en distintos navegadores.
+
+3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y
+obsoleto?
+-Desaprobado(deprecated): El elemento/atributo se desaconseja su uso, puede estar soportado temporalmente pero podría eliminarse en futuras versiones.
+-Obsoleto(obsolete): El elemento/atributo ya no es soportado por el estándar y no debe usarse.
+
+4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+-el DTD (Document Type Definition) es unonjunto de reglas quedefine la estructura y las reglas de un documento HTML.
+-Posibles DTDs en HTML 4.01:
+  - Strict DTD: sólo permite elementos y atributos recomendados.
+  - Transitional DTD: permite elementos y atributos desaprobados.
+  - Frameset DTD: permite el uso de marcos (frames).
+
+5. Qué son los metadatos y cómo se especifican en HTML?
+Es información sobre los datos del documento (autor, palabras clave, codificación, etc.) que se especifican con etiquetas `<meta>` en la sección `<head>`.
+
+Ejercitación 2
+Analizar los siguientes segmentos de código indicando en qué sección del documento HTML
+se colocan, cuál es el efecto que producen y señalar cada uno de los elementos, etiquetas, y atributos
+(nombre y valor), aclarando si es obligatorio.
+
+2.a) <! -- Código controlado el día 12/08/2009 →
+
+Se colocan en cualquier parte del documento. Es un comentario; no se muestra en navegador.
+Elementos/atributos: no aplica (es comentario).
+
+2.b) <div id="bloque1">Contenido del bloque1</div>
+
+Dónde: dentro de <body>.
+Efecto: contenedor de bloque. Por defecto ocupa ancho completo y permite agrupar contenido.
+Elementos/atributos: elemento div. id="bloque1" es un atributo. No es obligatorio el id, pero sirve para CSS/JS.
+
+2.c)<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32"
+longdesc="detalles.htm" />
+Dónde: <body>.
+
+Efecto: inserta una imagen.
+Atributos:
+-src (ruta de la imagen): necesario para mostrar la imagen (Si src está vacío no muestra nada)
+-alt (texto alternativo): obligatorio por accesibilidad.
+-id/name: identificadores (opcionales).
+-width/height: dimensiones en píxeles (son opcionales).
+-longdesc: enlace a descripción larga (soportado en HTML4; su uso actual es raro).
+
+2.d)<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+
+Dónde: en <head>.
+Efecto: definen metadatos keywords, http-equiv="expires" indica fecha de expiración/cache. lang="es" indica idioma del meta 
+Atributos: name, content, http-equiv.
+
+2.e)<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
+rel="help">Resumen HTML </a>
+
+Dónde: <body>.
+Efecto: enlace a otra página.
+Atributos importantes:
+href: URL destino (obligatorio para ser enlace).
+type: tipo MIME esperado (opcional).
+hreflang: idioma del destino (opcional).
+charset: codificación del recurso. (opcional, poco usado)
+rel: relación del enlace (opcional).
+
+2.f)
+<table width="200" summary="Datos correspondientes al ejercicio vencido">
+<caption align="top"> Título </caption>
+<tr>
+<th scope="col">&nbsp;</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+<tr>
+<th scope="row">1º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">2º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+Dónde: <body>
+Efecto: tabla con título(caption), encabezados (th) y filas.
+Atributos:
+-width (ancho)
+-summary (ayuda accesible para describir la tabla — usado en HTML4)
+-caption align (posiciona título)
+-scope en th (indica si es encabezado de fila/columna). 
+Ninguno es obligatorio para que funcione.
+
+Ejercitación 3
+En cada caso, explicar las diferencias entre los segmentos de código y sus visualizaciones:
+
+3.a)
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+<a href="#">Click aquí para ir a Google</a>
+<a href="#arriba">Click aquí para volver arriba</a>
+<a name="arriba" id="arriba"></a>
+
+Sin target: abre en la misma ventana/pestaña (el primer caso)
+target="_blank": abre en nueva ventana/pestaña. (el segundo caso)
+URL con espacio ("http://www. google.com.ar") es inválida y el navegador puede no resolverla. (el tercer caso)
+href="#" apunta al mismo documento, no navega, solo sube arriba o no hace nada. (el cuarto caso)
+href="#arriba" salta al ancla con name o id = arriba.
+<a name="arriba" id="arriba"></a> define un punto invisible en la página llamado arriba
+
+3.b)
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a
+href="http://www.google.com.ar">Click aquí</a></p>
+
+Todos lo casos presentan enlaces que llevan a la pagina de google, pero con diferentes estructuras:
+Si la etiqueta <img> no está envuelta por <a>, solo el texto es clickable.
+Si la <img> está dentro del <a>, la imagen es el enlace (clic en imagen navega).
+Si el <a> incluye imagen y texto, ambos son parte del enlace.
+
+3.c)
+ul es para lista sin orden (bullets). 
+ol es para lista ordenada con números. 
+li value="n" permite ajustar el número inicial en ol.
+Anidar ol dentro de li crea sublistas con numeración indentada. 
+blockquote es para citas y aplica margen/estilo.
+
+3.d)
+Visualmente las tablas son iguales.
+El uso de <th> da semántica a la celda (encabezado) y por defecto se muestra en negrita y centrado, porque es una hoja de estilos interna
+Reemplazar por <td> y usar <div align="center"><strong>...</strong></div> , imita el estilo de <th>
+Accesibilidad: los lectores de pantalla identifican <th> como encabezado. Con <td> con formato visual, los lectores no sabrán que ese texto es un encabezado.
+
+3.e)
+<caption>: aparece fuera de la tabla, centrado arriba (o abajo si se usa align="bottom"). No está encerrado por el borde de la tabla.
+Fila con colspan: el texto queda dentro del borde de la tabla, como si fuera parte de los datos.
+
+3.f)
+rowspan="2" une verticalmente celdas; colspan="3" une horizontalmente. 
+Cambia la estructura y posición de otras celdas.
+
+3.g)
+cellpadding añade relleno interno a cada celda 
+cellspacing controla espacio entre celdas.
+
+
+3.h)
+action="procesar.php" method="post" target="_blank" envía datos por POST a procesar.php y abre respuesta en nueva ventana.
+method="get" envía datos por query string.
+action="mailto:xx@xx.com" intenta abrir cliente de mail con datos. enctype="text/plain" especifica cómo codificar datos (raro).
+input type="submit" envía, input type="reset" limpia campos
+
+3.i)
+<button> puede contener imagen + texto y se renderiza como botón con contenido interno.
+<input type="button"> es un elemento vacío y solo muestra el value como texto del botón, no puede contener una imagen interna
+
+3.j)
+Radios con mismo name forman un grupo y solo uno puede estar seleccionado. 
+Nombres distintos permiten seleccionar varios (el segundo caso)
+
+3.k)
+<select name="lista">` es selección única.
+<select name="lista[]" multiple="multiple">` permite seleccionar varios.
+
+
+
+
+
+
+
