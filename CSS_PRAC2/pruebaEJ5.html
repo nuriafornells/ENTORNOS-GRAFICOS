@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 5</title>
+  <style>
+    h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+      color: red;
+    }
+
+    div p a[href] {
+      color: black;
+    }
+
+    #ultimo ul {
+      color: yellow;
+    }
+
+    #ultimo ul a {
+      color: blue;
+    }
+
+    div .importante {
+      color: green;
+    }
+
+    h1 .importante, h2 .importante, h3 .importante {
+      color: red;
+    }
+
+    h1[title] {
+      color: blue;
+    }
+
+    ol a:link {
+      color: blue;
+      text-decoration: none;
+    }
+
+    ol a:visited {
+      color: violet;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. <em>Texto enfatizado</em> en título</h2>
+
+  <div>
+    <p>Texto con <a href="https://www.utn.edu.ar">enlace dentro de div y p</a></p>
+  </div>
+
+  <div id="ultimo">
+    <ul>
+      <li>Elemento de lista</li>
+      <li><a href="https://www.google.com">Enlace en lista</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <p class="importante">Texto importante en div</p>
+  </div>
+
+  <h1><span class="importante">Importante en título</span></h1>
+
+  <h1 title="Título con atributo">Título con atributo title</h1>
+
+  <ol>
+    <li><a href="https://www.wikipedia.org">Enlace no visitado</a></li>
+    <li><a href="https://www.utn.edu.ar">Enlace visitado</a></li>
+  </ol>
+
+</body>
+</html>

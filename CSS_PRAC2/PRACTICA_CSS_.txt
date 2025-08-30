@@ -1,0 +1,154 @@
+EJERCICIO 1
+
+1. ¿ Qué es CSS y para qué se usa?
+CSS (Cascading Style Sheets) es un lenguaje que permite definir la presentación visual de documentos HTML.  Se usa para separar el contenido del diseño, facilitando el mantenimiento y la reutilización de estilos.  Permite controlar colores, fuentes, márgenes, posiciones, etc.
+
+
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+La estructura de una regla CSS tiene es:
+selector {
+  propiedad: valor;
+}
+el selector indica a qué elemento HTML se va a aplicar el estilo.
+Propiedad: define qué aspecto se quiere modificar.
+Valor: especifica cómo se modifica.
+
+3. ¿ Cuáles son las tres formas de dar estilo a un documento?
+Inline: dentro del atributo style de una etiqueta HTML.
+Interno: dentro de una etiqueta <style> en el <head> del HTML
+Externo: en un archivo .css separado, vinculado con <link>.
+
+4. ¿ Cuáles son los distintos tipos de selectores más utilizados? Ejemplifique cada uno.
+Selector de etiqueta: aplica a todos los elementos de ese tipo. EJ: p { color: blue; }
+Selector de clase: aplica a elementos con una clase específica. EJ: .importante { font-weight: bold; }
+Selector de ID: aplica a un único elemento con ese ID. EJ: #titulo { font-size: 24px; }
+Selector universal: aplica a todos los elementos. EJ: * { margin: 0; }
+Selector combinado: aplica a elementos que cumplen varias condiciones. EJ: p.importante { color: red; }
+
+5. ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?:
+Una pseudo-clase permite aplicar estilos en estados especiales de los elementos.
+Las más comunes en vínculos:
+a:link → enlace no visitado.
+a:visited → enlace ya visitado.
+a:hover → cuando el mouse pasa por encima.
+a:active → cuando el enlace está siendo clickeado.
+
+6. ¿ Qué es la herencia?
+La herencia en CSS significa que algunas propiedades se transmiten de un elemento padre a sus hijos. Por ejemplo, si un div tiene color: blue, los textos dentro de ese div también serán azules, a menos que se indique lo contrario.
+
+7. ¿ En qué consiste el proceso denominado cascada?
+La cascada es el mecanismo que CSS usa para decidir qué estilo aplicar cuando hay conflictos entre reglas. 
+Se basa en:
+-Especificidad del selector.
+-Orden de aparición (última regla tiene prioridad).
+-Importancia (!important sobrescribe todo).
+
+EJERCICIO 2
+Análisis por regla CSS
+1. p#normal
+Selector: aplica a un elemento <p> con id="normal".
+Propiedades:
+font-family: usa las fuentes Arial o Helvetica.
+font-size: tamaño de letra 11px.
+font-weight: texto en negrita.
+Efecto: el primer párrafo se verá con fuente Arial/Helvetica, tamaño 11px y en negrita.
+
+2. *#destacado
+Selector: aplica a cualquier elemento (*) que tenga id="destacado".
+Propiedades: Borde sólido, color azul, grosor 2px.
+Efecto:Se aplica tanto al <p id="destacado"> como al <table id="destacado">.Ambos tendrán un borde azul de 2px.
+
+3. #distinto
+Selector: cualquier elemento con id="distinto".
+Propiedades:
+Fondo celeste (#9EC7EB).
+Texto en rojo.
+Efecto: el último párrafo tendrá fondo celeste y texto rojo.
+
+EJERCICIO 3
+1. p.quitar
+Aplica solo a los párrafos (<p>) con clase quitar.
+Cambia el color del texto a rojo.
+Afecta:
+
+El segundo <p class="quitar">
+El último <p class="quitar importante"> (porque también tiene quitar)
+
+
+2. *.desarrollo
+
+Aplica a cualquier elemento con clase desarrollo.
+Cambia el tamaño de fuente a 8px.
+Afecta:
+El primer <p class="desarrollo">
+
+3. .importante
+Aplica a cualquier elemento con clase importante.
+Cambia el tamaño de fuente a 20px.
+Afecta:
+El cuarto <p class="importante">
+El último <p class="quitar importante"> (porque también tiene importante)
+
+
+EJERCICIO 4
+CASO 1: 
+- El p tiene clase .contenido (font-size: 14px, font-weight: bold.) Pero el style="font-weight: normal" lo sobrescribe y se ve normal.
+- El a se ve gris si es nuevo, azul si fue visitado y fucsia al pasar el mouse.
+
+CASO 2:
+- El body tiene clase .contenido (afecta a todo el contenido heredado)
+- El p hereda font-size: 14px, font-weight: bold.
+- El enlace se comporta igual que en el caso 1.
+
+el estilo inline tiene más prioridad que el de clase. La herencia desde el body aplica si no hay sobrescritura.
+
+EJERCICIO 5
+1. Los textos enfatizados dentro de cualquier título deben ser rojos.
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+  color: red;
+}
+2. Cualquier elemento que tenga asignado el atributo "href" y que esté dentro de cualquier párrafo que a
+su vez esté dentro de un bloque debe ser color negro.
+div p a[href] {
+  color: black;
+}
+3. El texto de las listas no ordenadas que estén dentro del bloque identificado como “ultimo” debe ser
+amarillo pero si es un enlace a otra página debe ser azul.
+#ultimo ul {
+  color: yellow;
+}
+
+#ultimo ul a {
+  color: blue;
+}
+4. Los elementos identificados como “importante” dentro de cualquier bloque deben ser verdes, pero si
+están dentro de un título deben ser rojos.
+div .importante {
+  color: green;
+}
+
+h1 .importante, h2 .importante, h3 .importante {
+  color: red;
+}
+5. Todos los elementos h1 que especifique el atributo title, cualquiera que sea su valor, deben ser azules.
+h1[title] {
+  color: blue;
+}
+6. El color de los enlaces en las listas ordenadas debe ser azul para los enlaces aún no visitados, y violeta
+para los ya visitados y, además, no deben aparecer subrayados.
+ol a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+ol a:visited {
+  color: violet;
+  text-decoration: none;
+}
+
+EJERCICIO 6
+
+
+
+
+EJERCICIO 7
