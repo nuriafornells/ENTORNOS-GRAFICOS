@@ -1,0 +1,100 @@
+Parte 1
+
+1- A qué nos referimos al hablar de Arquitectura de la Información y cuáles son los ítems
+principales que constituyen su metodología?
+
+Es el conjunto de métodos y herramientas que permiten organizar los contenidos para que los usuarios los encuentren y utilicen de forma simple y directa.
+Ítems principales de su metodología:
+- Organización de contenidos.
+- Facilidad de reconocimiento del sitio y su propietario.
+- Comprensión rápida y sin esfuerzo.
+- Localización sencilla de la información ofrecida.
+
+
+2- Cuál es la ventaja de tener identificados y definidos los objetivos del sitio?
+
+Permite acotar el alcance, orientar las tareas concretas y avanzar de forma ordenada hacia el cumplimiento de metas claras (idealmente no más de cinco objetivos).
+
+3- Qué es la audiencia?
+
+Es el público o los grupos de personas hacia los que se orienta el sitio web.
+
+4- Según qué tipos de características se deben analizar las audiencias?
+
+- Investigación interna en la institución.
+- Entrevistas a quienes atienden al público.
+- Escenarios de uso (situaciones reales de interacción con el sitio).
+
+5- Qué son los escenarios de uso?
+
+Situaciones reales en las que un usuario interactúa con el sitio para cumplir un objetivo específico, basadas en usuarios existentes
+
+6- Cuáles deberían ser los contenidos indispensables de un sitio web?
+
+Información útil para la comunidad, datos institucionales, servicios interactivos, y recursos que respondan a las necesidades de la audiencia.
+
+7- Cuáles son los requerimientos funcionales más frecuentes en un sitio web?
+
+Registro de usuarios, sistemas de gestión de contenidos, comercio electrónico, aplicaciones de base de datos, interacción con el visitante.
+
+8- Al definir la estructura de un sitio, ¿cuáles son los dos aspectos fundamentales que se
+deben considerar?
+
+- Secciones, funcionalidades y sistemas de navegación (estructura).
+- No incluye elementos gráficos (eso es parte del diseño)
+
+9- Cuál es la diferencia entre estructura y diseño de un sitio web?
+
+La estructura es la organización general del sitio (secciones, navegación), mientras que el diseño es la  solución gráfica (colores, logotipos, elementos visuales)
+
+10- Cuáles son las características que debe tener el sistema de navegación? Explicar c/u.
+
+- Textual: menús, guías, botones claros y distinguibles.
+- Contextual: presentación de la información con elementos gráficos, redacción y URL coherente.
+
+11- Cuáles son los elementos más importantes de un sistema de navegación?
+
+Menús, guías, botones, enlaces internos y la redacción de los textos que orientan al usuario.
+
+12- Cuáles son las cuatro etapas sucesivas que se deben realizar para definir el Diseño
+Visual de un sitio web y en qué consiste cada una?
+
+- Diseño de estructuras de páginas: wireframes con ubicación de componentes.
+- Bocetos de diseño: dibujos digitales de las páginas principales.
+- Borradores de página: prototipo clickeable en HTML.
+- Maqueta web: sitio completo en HTML con imágenes y contenidos reales.
+
+13- Cuáles son los sistemas que puede utilizar un Sitio Web para recibir feedback o
+retroalimentación de parte del usuario?
+
+Formularios de contacto, encuestas online, foros, chat o secciones de comentarios.
+
+14- En qué consiste la Prueba de verificación de Contenidos?
+
+Consiste en revisar que los textos, imágenes y materiales del sitio sean correctos, actuales y completos para la audiencia.
+
+15- En qué consiste la Prueba de Verificaciones de Interfaces?
+consiste en comprobar que la interfaz sea clara, usable y coherente con el diseño y la estructura.
+
+16- Cuáles son los chequeos más importantes que se deben realizar respecto de las
+funcionalidades y aplicaciones que ofrece el sitio?
+
+Verificar que todas las funciones y aplicaciones respondan correctamente, sin errores, y cumplan lo previsto.
+
+Parte 2
+
+1- Qué es una interfaz y cuáles son sus elementos fundamentales?
+
+La interfaz es el medio de interacción entre el usuario y el sistema. 
+Elementos: componentes visuales, controles de navegación, organización de la información.
+
+2- Qué es un sistema de navegación y cuáles deben ser sus elementos indispensables?
+
+Es el mecanismo que guía al usuario dentro del sitio. Sus elementos indispensables son: menús, guías, botones y enlaces claros.
+
+3- Qué es Flash y qué problemas puede acarrear su uso? 
+Es una tecnología para animaciones y multimedia. 
+Problemas: incompatibilidad con dispositivos móviles, tiempos de carga, problemas de accesibilidad y seguridad.
+
+4- Qué es AJAX y qué problemas puede acarrear su uso?
+Es una tecnología que permite actualizar partes de una página sin recargarla. Problemas: puede dificultar la indexación por buscadores, generar incompatibilidades y afectar la accesibilidad
