@@ -84,8 +84,38 @@ a) salida: bar1 ($matriz["x"] muestra "bar" y $matriz[12] muestra true que es "1
 b) salida 5942 (de $matriz["unamatriz"][6] el 5, de  $matriz["unamatriz"][13] el 9, y de $matriz["unamatriz"]["a"] el 42)
 c) No hay salida porque no hay echo
 
-Ejercicio 3:
-a)
-b)
+Ejercicio 3
+a) Devuelve: Has entrado en esta pagina a las 15 horas, con 35 minutos y 12 segundos, del 10/9/2024
+b) Devuelve: 5+6=11
 
-Ejercicio 4:
+Ejercicio 4)
+
+function comprobar_nombre_usuario($nombre_usuario){  
+   if (strlen($nombre_usuario)<3 || strlen($nombre_usuario)>20){  
+      echo $nombre_usuario . " no es válido<br>";  
+      return false;  
+   }  
+   $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";  
+   for ($i=0; $i<strlen($nombre_usuario); $i++){  
+      if (strpos($permitidos, substr($nombre_usuario,$i,1))===false){  
+         echo $nombre_usuario . " no es válido<br>";  
+         return false;  
+      }  
+   }  
+   echo $nombre_usuario . " es válido<br>";  
+   return true;  
+}
+
+// Pruebas
+comprobar_nombre_usuario("pepe");
+comprobar_nombre_usuario("a");
+comprobar_nombre_usuario("usuario_1");
+comprobar_nombre_usuario("user!");
+
+echo "<hr>";
+
+Terminaría siendo:
+comprobar_nombre_usuario("pepe");    (es válido)
+comprobar_nombre_usuario("a");     ( no es válido)
+comprobar_nombre_usuario("usuario_1"); (es válido)
+comprobar_nombre_usuario("user!");    ( no es válido)
