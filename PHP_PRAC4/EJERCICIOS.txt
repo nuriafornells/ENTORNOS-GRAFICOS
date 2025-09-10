@@ -45,9 +45,8 @@ booleanstringstringinteger1xyzxyz184444
 
 Ejercicio 2:
 
-a)
-b)
-c)
+a y b ) todos los ejemplos son equivalentes. Todos imprimen los números del 1 al 10 pero usando distintos bucles o formato
+c) ambos codigos son equivalentes en comportamiento, pero uno usa if-elseif y el otro switch
 
 Ejercicio 3:
 
