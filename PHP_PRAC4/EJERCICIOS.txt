@@ -1,0 +1,45 @@
+PHP: variables, tipos, operadores, expresiones, estructuras de control
+
+Ejercicio 1:
+
+
+
+Ejercicio 2:
+
+a)
+b)
+c)
+
+Ejercicio 3:
+
+a)
+b)
+
+Ejercicio 4:
+En el primer echo , todavia no se definieron las variables $flor ni $color, entonces como estan vacias solo devuelve "El".
+En el segundo echo devuelve el texto completo con el valor de las variables "El clavel blanco" ya que en este punto si se definieron, con el include 'datos.php' previo
+
+Ejercicio 5:
+Analisis: (puse un 0 en contador.dat para que el contador inicie en 0)
+El archivo contador.php se encarga de leer cuántas visitas hay guardadas en contador.dat (que inició en 0), luego suma 1 a ese número, guardar el nuevo número en el archivo contador.dat y muestra el total actualizado en pantalla.
+ - con "r", "w" en $abrir = fopen($archivo) permite abrir el archivo para leerlo (r) y para editarlo (w) que borra el contenido que tenia antes
+El archivo visitas.php solo contiene al archivo de contador.php
+El archivo contador.dat se usa para guardar el número total de visitas, para que persista
+
+PHP: arrays, funciones 
+
+Ejercicio 1:
+Si, son equivalentes porque construye el mismo array 
+
+Ejercicio 2:
+
+a) salida: bar1 ($matriz["x"] muestra "bar" y $matriz[12] muestra true que es "1")
+b) salida 5942 (de $matriz["unamatriz"][6] el 5, de  $matriz["unamatriz"][13] el 9, y de $matriz["unamatriz"]["a"] el 42)
+c) No hay salida porque no hay echo
+
+Ejercicio 3:
+
+a)
+b)
+
+Ejercicio 4:
