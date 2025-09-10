@@ -1,7 +1,6 @@
 Parte 1
 
-1- A qué nos referimos al hablar de Arquitectura de la Información y cuáles son los ítems
-principales que constituyen su metodología?
+1- A qué nos referimos al hablar de Arquitectura de la Información y cuáles son los ítems principales que constituyen su metodología?
 
 Es el conjunto de métodos y herramientas que permiten organizar los contenidos para que los usuarios los encuentren y utilicen de forma simple y directa.
 Ítems principales de su metodología:
@@ -9,7 +8,6 @@ Es el conjunto de métodos y herramientas que permiten organizar los contenidos 
 - Facilidad de reconocimiento del sitio y su propietario.
 - Comprensión rápida y sin esfuerzo.
 - Localización sencilla de la información ofrecida.
-
 
 2- Cuál es la ventaja de tener identificados y definidos los objetivos del sitio?
 
@@ -23,7 +21,7 @@ Es el público o los grupos de personas hacia los que se orienta el sitio web.
 
 - Investigación interna en la institución.
 - Entrevistas a quienes atienden al público.
-- Escenarios de uso (situaciones reales de interacción con el sitio).
+- Escenarios de uso
 
 5- Qué son los escenarios de uso?
 
@@ -37,8 +35,7 @@ Información útil para la comunidad, datos institucionales, servicios interacti
 
 Registro de usuarios, sistemas de gestión de contenidos, comercio electrónico, aplicaciones de base de datos, interacción con el visitante.
 
-8- Al definir la estructura de un sitio, ¿cuáles son los dos aspectos fundamentales que se
-deben considerar?
+8- Al definir la estructura de un sitio, ¿cuáles son los dos aspectos fundamentales que se deben considerar?
 
 - Secciones, funcionalidades y sistemas de navegación (estructura).
 - No incluye elementos gráficos (eso es parte del diseño)
@@ -49,23 +46,21 @@ La estructura es la organización general del sitio (secciones, navegación), mi
 
 10- Cuáles son las características que debe tener el sistema de navegación? Explicar c/u.
 
-- Textual: menús, guías, botones claros y distinguibles.
-- Contextual: presentación de la información con elementos gráficos, redacción y URL coherente.
+- Textual: se refiere a que la navegación se hace mediante elementos concretos, como menús, guías, botones, que deben ser claros y distinguibles.
+- Contextual: se refiere a la presentación de la información y a todos los elementos que ayudan a que el usuario se oriente (gráfica, redacción, URL coherente).
 
 11- Cuáles son los elementos más importantes de un sistema de navegación?
 
 Menús, guías, botones, enlaces internos y la redacción de los textos que orientan al usuario.
 
-12- Cuáles son las cuatro etapas sucesivas que se deben realizar para definir el Diseño
-Visual de un sitio web y en qué consiste cada una?
+12- Cuáles son las cuatro etapas sucesivas que se deben realizar para definir el Diseño Visual de un sitio web y en qué consiste cada una?
 
 - Diseño de estructuras de páginas: wireframes con ubicación de componentes.
 - Bocetos de diseño: dibujos digitales de las páginas principales.
 - Borradores de página: prototipo clickeable en HTML.
 - Maqueta web: sitio completo en HTML con imágenes y contenidos reales.
 
-13- Cuáles son los sistemas que puede utilizar un Sitio Web para recibir feedback o
-retroalimentación de parte del usuario?
+13- Cuáles son los sistemas que puede utilizar un Sitio Web para recibir feedback o retroalimentación de parte del usuario?
 
 Formularios de contacto, encuestas online, foros, chat o secciones de comentarios.
 
@@ -74,10 +69,10 @@ Formularios de contacto, encuestas online, foros, chat o secciones de comentario
 Consiste en revisar que los textos, imágenes y materiales del sitio sean correctos, actuales y completos para la audiencia.
 
 15- En qué consiste la Prueba de Verificaciones de Interfaces?
+
 consiste en comprobar que la interfaz sea clara, usable y coherente con el diseño y la estructura.
 
-16- Cuáles son los chequeos más importantes que se deben realizar respecto de las
-funcionalidades y aplicaciones que ofrece el sitio?
+16- Cuáles son los chequeos más importantes que se deben realizar respecto de las funcionalidades y aplicaciones que ofrece el sitio?
 
 Verificar que todas las funciones y aplicaciones respondan correctamente, sin errores, y cumplan lo previsto.
 
