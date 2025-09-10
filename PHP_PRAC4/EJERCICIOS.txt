@@ -1,7 +1,46 @@
 PHP: variables, tipos, operadores, expresiones, estructuras de control
 
 Ejercicio 1:
+variables y tipos:
+$a = TRUE; boolean
+$b = "xyz";   string (comillas dobles)
+$c = 'xyz';   string (comillas simples)
+$d = 12;      integer
 
+Funciones y sus parámetros
+function doble($i) {
+    return $i*2;
+}
+Parámetro: $i
+Devuelve el doble del valor recibido.
+
+operadores:
+* multiplicación
++=  suma y asignación
+++  incremento
+? :  operador ternario
+= asignación
+, separación de argumentos en echo
+
+Funciones PHP
+gettype($var) devuelve el tipo de dato de la variable
+is_int($d) verifica si $d es entero
+is_string($a) verifica si $a es string
+
+estructuras de control:
+if (is_int($d)) {
+    $d += 4;
+}
+
+
+if (is_string($a)) {
+    echo "Cadena: $a";
+}
+
+$d = $a ? ++$d : $d*3
+
+salida:
+booleanstringstringinteger1xyzxyz184444
 
 
 Ejercicio 2:
@@ -12,8 +51,17 @@ c)
 
 Ejercicio 3:
 
-a)
-b)
+a) Este código genera una tabla HTML de 5 filas y 2 columnas usando PHP, con celdas vacias 
+for ($r = 1; $r <= $row; $r++): recorre las filas
+for ($c = 1; $c <= $col; $c++): recorre las columnas dentro de cada fila
+echo "<td>&nbsp;</td>": imprime una celda vacía
+
+b) Este código muestra un formulario para ingresar la edad, y al enviarlo, evalúa si la persona es mayor o menor de edad según si tiene 21 años o más
+if (!isset($_POST['submit'])): si el formulario no fue enviado, se muestra el formulario
+$_SERVER['PHP_SELF']: hace que el formulario se envíe a la misma página
+$_POST['age']: obtiene la edad ingresada
+if ($age >= 21): evalúa si es mayor de edad
+y muestra "Mayor de edad" o "Menor de edad" según el valor ingresado
 
 Ejercicio 4:
 En el primer echo , todavia no se definieron las variables $flor ni $color, entonces como estan vacias solo devuelve "El".
@@ -38,7 +86,6 @@ b) salida 5942 (de $matriz["unamatriz"][6] el 5, de  $matriz["unamatriz"][13] el
 c) No hay salida porque no hay echo
 
 Ejercicio 3:
-
 a)
 b)
 
