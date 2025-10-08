@@ -1,0 +1,145 @@
+Ejercicio 1
+- Escribir un script en PHP para poder enviar un correo electrónico, con formato HTML, a
+través del servidor
+
+<?php
+$destinatario = "correo@correo.com";
+$asunto = "Prueba prac 5";
+$cuerpo = '
+<html>
+<head>
+  <title>Correo HTML</title>
+</head>
+<body>
+  <h1>Hola</h1>
+  <p><b>Este es un correo de prueba en formato HTML.</b></p>
+</body>
+</html>
+';
+
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+$headers .= "From: Nombre <nombre@dominio.com>\r\n";
+$headers .= "Reply-To: respuesta@dominio.com\r\n";
+$headers .= "Cc: copia@dominio.com\r\n";
+$headers .= "Bcc: oculta1@dominio.com\r\n";
+
+mail($destinatario, $asunto, $cuerpo, $headers);
+?>
+
+Ejercicio 2
+- Confeccionar una página de Contacto que presente un formulario para que los visitantes
+puedan enviar consultas al webmaster.
+
+formulario.html:
+<body>
+  enviar.php
+    <fieldset>
+      <p><label>Nombre <input type="text" name="nombre" size="25" /></label></p>
+      <p><label>Email <input type="text" name="email" size="25" /></label></p>
+      <p><label>Comentario <textarea name="texto" cols="32" rows="6"></textarea></label></p>
+      <input type="submit" value="Enviar"/>
+    </fieldset>
+  </form>
+</body>
+
+enviar.php:
+<?php
+$fecha = date("d-m-Y");
+$hora = date("H:i:s");
+$destino = "micorreo@dominio.com";
+$asunto = ".."; 
+$desde = 'From:' . $_POST['email'];
+$comentario = "
+Nombre: {$_POST['nombre']}
+Email: {$_POST['email']}
+Consulta: {$_POST['texto']}
+Enviado: $fecha a las $hora
+";
+
+mail($destino, $asunto, $comentario, $desde);
+echo " enviado";
+?>
+
+
+Ejercicio 3
+- Escribir un script para que un visitante recomiende el sitio a un amigo. 
+
+ recomendar.html:
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Recomendar sitio</title>
+</head>
+<body>
+  <h2>Recomendá este sitio a un amigo</h2>
+  recomendar.php
+    <p><label>Tu nombre: <input type="text" name="nombre" required></label></p>
+    <p><label>Tu email: <input type="email" name="email" required></label></p>
+    <p><label>Email de tu amigo: <input type="email" name="amigo" required></label></p>
+    <p><label>Mensaje: <textarea name="mensaje" rows="5" cols="40"></textarea></label></p>
+    <input type="submit" value="Enviar recomendación">
+  </form>
+</body>
+</html>
+
+recomendar.php
+<?php
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+$amigo = $_POST['amigo'];
+$mensaje = $_POST['mensaje'];
+
+$asunto = "$nombre te recomienda este sitio";
+$cuerpo = "
+<html>
+<head><title>Recomendación</title></head>
+<body>
+  <h2>Hola</h2>
+  <p>$nombre ($email) te recomienda visitar este sitio.</p>
+  <p>Mensaje personal:</p>
+  <blockquote>$mensaje</blockquote>
+</body>
+</html>
+";
+
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
+$headers .= "From: $nombre <$email>\r\n";
+
+mail($amigo, $asunto, $cuerpo, $headers);
+
+echo "Tu recomendación fue enviada a $amigo";
+?>
+
+Ejercicio 4
+- Contar las páginas visitadas por un usuario durante su sesión.
+
+cuenta.php:
+<?php
+session_start();
+if (!isset($_SESSION["contador"])) {
+  $_SESSION["contador"] = 1;
+} else {
+  $_SESSION["contador"]++;
+}
+?>
+<html>
+<body>
+  cant_visitas.phpOtra página</a>
+</body>
+</html>
+
+cant_visitas.php:
+<?php
+session_start();
+?>
+<html>
+<body>
+  <?php
+  echo " visitó " . $_SESSION["contador"] . " páginas";
+  ?>
+  <br><br>
+  cuenta.phpOtra página</a>
+</body>
+</html>
