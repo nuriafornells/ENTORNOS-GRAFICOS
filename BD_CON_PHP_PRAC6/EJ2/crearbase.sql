@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS Capitales;
+USE Capitales;
+CREATE TABLE IF NOT EXISTS Ciudades (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  Nombre VARCHAR(100),
+  Pais VARCHAR(100),
+  Habitantes INT
+);
